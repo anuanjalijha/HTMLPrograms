@@ -1,0 +1,39 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+.student{
+    width: 700px;
+    margin: 0px auto;
+    background-color: red;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    color: blueviolet;
+    padding: 15px;
+}
+.student tr, td{
+    color: white;
+    font-size: 20px;
+   
+}
+table td{
+     line-height: 50px;
+}
+input[type=number],input[type=text],input[type=email]{
+    padding: 5px;
+    width: 250px;
+}
+table tr td:hover{
+    color:black;
+}
+button{
+    padding: 8px;
+    margin:8px;
+    border-radius:10px;
+    color: white;
+    background-color: black;
+}
+
+

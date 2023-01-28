@@ -1,0 +1,69 @@
+<html>
+   <head>
+      <title>  form                </title>
+       <link href="form2.css" type="text/css" rel="stylesheet">
+       
+   </head>
+   <body>
+     
+        <h1> FORM </h1>
+        <div class="student">
+        <form>
+          
+           <table>
+              <tr >
+                 <td>NAME</td>
+                 <td><input id="input1" type="text" maxlength="50" required autofocus></td>    
+              </tr>
+              <tr>
+                 <td>FATHER'S NAME</td>
+                  <td><input type="text" maxlength="50" required></td>   
+              </tr>
+              
+              <tr>
+                <td>MOTHER'S NAME</td>
+                <td><input type="text" maxlength="50" required></td>  
+              </tr>
+              
+              <tr>
+                 <td>ADDRESS</td>
+                 <td><textarea required></textarea> </td> 
+              </tr>
+              <tr>
+                  
+                 <td>EMAIL</td>
+                 <td><input id="input4" type="email" maxlength="" pattern = "/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Please enter valid email address" required></td> 
+              
+              
+              </tr>
+              <tr>
+                 <td>AGE</td>
+                 <td><input id="input5" type="number"  required></td> 
+              </tr>
+              
+              <tr>
+                  <td><button onclick="validation()" type="submit">SUBMIT</button></td>
+              </tr>
+                 
+           </table>
+             </form>     
+         </div>
+         <script>
+           function validation(){
+               let age = document.getElementById("input5");
+               let name = document.getElementById("input1");
+               
+               
+               
+               if(age.value>100){
+                   alert("Age should not more than 100 years");
+               }
+               else if(name.value.length>30){
+                   alert("Name should not  more than 30 characters");
+               }
+               
+           }  
+             
+       </script>
+       </body>  
+</html>
