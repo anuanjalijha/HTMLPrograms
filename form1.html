@@ -17,12 +17,12 @@
               </tr>
               <tr>
                  <td>FATHER'S NAME</td>
-                  <td><input type="text" maxlength="50" required></td>   
+                  <td><input id ="input2" type="text" maxlength="()" required></td>   
               </tr>
               
               <tr>
                 <td>MOTHER'S NAME</td>
-                <td><input type="text" maxlength="50" required></td>  
+                <td><input  id="input3" type="text" maxlength="" required></td>  
               </tr>
               
               <tr>
@@ -32,9 +32,23 @@
               <tr>
                   
                  <td>EMAIL</td>
-                 <td><input id="input4" type="email" maxlength="" pattern = "/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Please enter valid email address" required></td> 
+                 <td><input id="input4" type="email"  required></td> 
               
               
+              </tr>
+              <tr>
+                  <td>CATEGORY</td>
+                  <td>General <input type="radio" name="mycategory"></td>
+                  <td><div class="dropdown">
+  Non-General <input type="radio"  class="dropbtn" name="mycategory" onclick="myFunction()">
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">OBC <input type="radio" name="anothercategory"></a>
+    <a href="#">SC <input type="radio" name="anothercategory"></a>
+    <a href="#">ST <input type="radio" name="anothercategory"></a>
+    <a href="#">EWS <input type="radio" name="anothercategory"></a>
+  </div>
+</div>
+                  </td> 
               </tr>
               <tr>
                  <td>AGE</td>
@@ -52,17 +66,56 @@
            function validation(){
                let age = document.getElementById("input5");
                let name = document.getElementById("input1");
+               let father_name = document.getElementById("input2");
+               let mother_name = document.getElementById("input3");
+               let name_unicode = name.value.charCodeAt(0);
+               let father_name_unicode = father_name.value.charCodeAt(0);
+               let mother_name_unicode = mother_name.value.charCodeAt(0);
                
                
                
+               if(name_unicode<64 || name_unicode>91){
+                   alert("The first character of a name should be in capital letter")
+               }
+               if(name.value.length>30){
+                   alert("Name should not  more than 30 characters");
+               }
+               if(father_name_unicode<64 || father_name_unicode>91){
+                   alert("The first character of father's name should be in capital letter")
+               }
+               if(mother_name_unicode<64 || mother_name_unicode>91){
+                   alert("The first character of mother's name should be in capital letter")
+               }
                if(age.value>100){
                    alert("Age should not more than 100 years");
                }
-               else if(name.value.length>30){
-                   alert("Name should not  more than 30 characters");
-               }
+                
+                
                
-           }  
+               
+           } 
+           
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+  
              
        </script>
        </body>  
