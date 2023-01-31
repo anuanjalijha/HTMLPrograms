@@ -1,0 +1,22 @@
+table{
+    width: 1000px;
+height: 200px;
+}
+table,th,td{
+    border: 2px solid red;
+    border-collapse: collapse;
+    text-align: center;
+}
+th{
+    color:blue;
+}
+td{
+    color:midnightblue;
+
+}
+table tr:hover{
+    background-color:chartreuse;
+}
+table .first_row,.second_row{
+    background-color: aqua;
+}
