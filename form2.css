@@ -1,11 +1,15 @@
 *{
     padding: 0px;
     margin:0px;
+    
+}
+body{
+    background-color:azure;
 }
 .student{
     width: 700px;
     margin: 0px auto;
-    background-color: red;
+    background-color:cadetblue;
     padding: 20px;
 }
 h1{
@@ -16,24 +20,31 @@ h1{
 .student tr, td{
     color: white;
     font-size: 20px;
+    padding: 5px;
    
 }
 table td{
      line-height: 50px;
 }
-input[type=number],input[type=text],input[type=email]{
+input[type=number],input[type=text],input[type=email],textarea{
     padding: 5px;
     width: 250px;
+    border-radius:5px; 
 }
 table tr td:hover{
     color:black;
 }
+/*
+.last_row td {
+    align-items:flex-end;
+}
+*/
 button{
     padding: 8px;
-    margin:8px;
+    margin-left:80px;
     border-radius:10px;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color:white;
 }
 .dropbtn {
   background-color: #3498DB;
