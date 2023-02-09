@@ -1,0 +1,43 @@
+<html>
+                <head>
+                    <title>Email Validation</title>
+                </head>
+                <body>
+                <h1>form</h1>
+                <form>
+                <table>
+                 <tr>
+                  
+                 <td>EMAIL</td>
+                 <td><input id="input4" type="text" placeholder="Please enter the email"  required></td> 
+              
+              
+              </tr>
+                   <tr>
+                  <td><button onclick="validationh()" type="submit">SUBMIT</button></td>
+              </tr>
+                    </table>
+                    </form>
+            <script>
+        function validationh(){
+                      let email_address = document.getElementById("input4");
+//           let email_start = mother_name.value.charCodeAt(0);
+     
+//          alert("Email should start with an alphabet");             
+   var letters = "^[A-Za-z]";
+   if(email_address.value.charAt(0).match(letters))
+     {
+      return email_address.value;
+     }
+   else
+     {
+     alert("Email should start with an alphabet");
+         return false;
+     }
+  
+  
+                       }
+                        
+                    </script>
+    </body>
+</html>
