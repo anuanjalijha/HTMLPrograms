@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Form </title>
+        <link href="FormWithoutUsingTable.css" rel="stylesheet">
+    </head>
+    <body>
+      <h1>FORM</h1>
+       <form>
+         <div>
+             <label for="input1">NAME:</label><input id="input1" name="myname" type="text" placeholder="Enter your name" maxlength="50" required autofocus>
+           </div>
+           <div>
+               <label for="input2">FATHER'S NAME:</label><input id ="input2" name="myfather'sname" type="text" placeholder="Please enter the name"  maxlength="18" required>
+           </div>
+           <div>
+               <label for="input3">MOTHER'S NAME:</label><input  id="input3" name="mymother'sname" type="text" placeholder="Please enter the name"  maxlength="" required>
+           </div>
+           <div>
+               <label for="input4">ADDRESS:</label><textarea name="myaddress" id="input4" placeholder="Please enter the address" required></textarea> 
+           </div>
+           <div>
+               <label for="input5">EMAIL:</label><input name="myemail" id="input5" type="email" placeholder="Please enter the email"  required>
+              
+           </div>
+           <div>
+               <label class="category" for="input6"> CATEGORY:</label> General <input type="radio" name="mycategory" id="input6">
+                  <div class="dropdown">
+  Non-General <input type="radio"  class="dropbtn" name="mycategory" onclick="myFunction()">
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">OBC <input type="radio" name="anothercategory"></a>
+    <a href="#">SC <input type="radio" name="anothercategory"></a>
+    <a href="#">ST <input type="radio" name="anothercategory"></a>
+    <a href="#">EWS <input type="radio" name="anothercategory"></a>
+  </div>
+                      </div> 
+           </div>
+           <div>
+               
+               <lable for="input7">GENDER: </lable>Male <input type="radio" name="mygender" id="input7">
+                  Female<input type="radio" name="mygender">
+                  
+           </div>
+           <div>
+               <lable for="input8">AGE:</lable><input id="input8" name="myage" type="number" placeholder="Please enter your ege" required>
+           </div>
+           <div>
+            <button onclick="validation()" type="submit">SUBMIT</button>
+           </div>
+           
+          
+            
+                   
+              
+           
+       </form>
+      <script>
+           function validation(){
+               let age = document.getElementById("input8");
+               let name = document.getElementById("input1");
+               let father_name = document.getElementById("input2");
+               let mother_name = document.getElementById("input3");
+               let name_unicode = name.value.charCodeAt(0);
+               let father_name_unicode = father_name.value.charCodeAt(0);
+               let mother_name_unicode = mother_name.value.charCodeAt(0);
+               
+               
+               
+               if(name_unicode<64 || name_unicode>91){
+                   alert("The first character of a name should be in capital letter")
+               }
+               if(name.value.length>30){
+                   alert("Name should not  more than 30 characters");
+               }
+               if(father_name_unicode<64 || father_name_unicode>91){
+                   alert("The first character of father's name should be in capital letter")
+               }
+               if(mother_name_unicode<64 || mother_name_unicode>91){
+                   alert("The first character of mother's name should be in capital letter")
+               }
+               if(age.value>100){
+                   alert("Age should not more than 100 years");
+               }
+                
+                
+               
+               
+           } 
+           
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+  
+             
+       </script>  
+    </body>
+</html>
